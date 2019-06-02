@@ -15,10 +15,12 @@ function increaseRankBy(n) {
 
 function deepestChild() {
   var current = document.querySelector('div#grand-node').querySelectorAll('div')
-  var hold = 1
-  while (hold) {
-    if (typeof current.querySelector('div') === 'undefined')
-    hold = current.querySelector('div')
+  for (let i=0; i<current.length; i++) {
+    if (typeof current.querySelector('div') === undefined) {
+      return current
+    }
+    current = current.querySelector('div')
+
   }
 }
 }
