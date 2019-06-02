@@ -17,7 +17,7 @@ function deepestChild() {
   var current = document.querySelector('div#grand-node').querySelectorAll('div')
   var hold = 1
   while (hold) {
-    if (typeof current.querySelector('div'))
+    if (typeof current.querySelector('div') === 'undefined')
     hold = current.querySelector('div')
   }
 }
